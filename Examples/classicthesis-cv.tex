@@ -1,0 +1,39 @@
+% cv example for classicthesis.sty
+\documentclass[10pt,a4paper]{scrartcl}
+\usepackage[LabelsAligned]{currvita} % nice cv style
+\usepackage{url}
+\usepackage[ngerman]{babel}
+\usepackage[nochapters]{../classicthesis}
+% Some font experiments
+%\usepackage[osf]{libertine}
+%\usepackage{hfoldsty}
+%\usepackage[math]{iwona} %[light,condensed,math]
+%\renewcommand{\sfdefault}{iwona}
+%\usepackage{lmodern} % <-- no osf support :-(
+%\usepackage[urw-garamond]{mathdesign} %<-- no osf support :-(
+
+\renewcommand*{\cvheadingfont}{\LARGE\color{Maroon}}
+\renewcommand*{\cvlistheadingfont}{\large}
+\renewcommand*{\cvlabelfont}{\qquad}
+
+\usepackage[margin=0.8 in]{geometry}
+
+\begin{document}
+    \begin{cv}{\spacedallcaps{Marwan Abdellah}}
+        %\pdfbookmark[1]{Pers\"onliche Daten}{PersDat}
+        \begin{cvlist}{\spacedlowsmallcaps{Academic Degrees}}\label{PersDat}  
+            \item  \textit{M.Sc., Biomedical Engineering} \\
+             Systems \& Biomedical Engineering Department, Cairo University.\\
+             {Sep. 2009 - Feb. 2012}
+             
+             \item  \textit{B.Sc., Biomedical Engineering} \\
+             Systems \& Biomedical Engineering Department, Cairo University.\\
+             {Sep. 2004 - July 2009}	
+        \end{cvlist}
+        
+        %\pdfbookmark[1]{Irgendwas}{irgendwas}
+        \begin{cvlist}{\spacedlowsmallcaps{Experience}}\label{irgendwas}
+            \item   \dots 
+        \end{cvlist}
+    \end{cv}
+\end{document}

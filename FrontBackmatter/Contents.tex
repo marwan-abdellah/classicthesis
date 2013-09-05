@@ -1,0 +1,111 @@
+%*******************************************************
+% Table of Contents
+%*******************************************************
+%\phantomsection
+\refstepcounter{dummy}
+\pdfbookmark[1]{\contentsname}{tableofcontents}
+\setcounter{tocdepth}{2} % <-- 2 includes up to subsections in the ToC
+\setcounter{secnumdepth}{3} % <-- 3 numbers up to subsubsections
+\manualmark
+\markboth{\spacedlowsmallcaps{\contentsname}}{\spacedlowsmallcaps{\contentsname}}
+\tableofcontents 
+\automark[section]{chapter}
+\renewcommand{\chaptermark}[1]{\markboth{\spacedlowsmallcaps{#1}}{\spacedlowsmallcaps{#1}}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\enspace\spacedlowsmallcaps{#1}}}
+%*******************************************************
+% List of Figures and of the Tables
+%*******************************************************
+\clearpage
+
+\begingroup 
+    \let\clearpage\relax
+    \let\cleardoublepage\relax
+    \let\cleardoublepage\relax
+    %*******************************************************
+    % List of Figures
+    %*******************************************************    
+    %\phantomsection 
+    \refstepcounter{dummy}
+    %\addcontentsline{toc}{chapter}{\listfigurename}
+    \pdfbookmark[1]{\listfigurename}{lof}
+    \listoffigures
+
+    \vspace*{8ex}
+
+    %*******************************************************
+    % List of Tables
+    %*******************************************************
+    %\phantomsection 
+    \refstepcounter{dummy}
+    %\addcontentsline{toc}{chapter}{\listtablename}
+    \pdfbookmark[1]{\listtablename}{lot}
+    \listoftables
+        
+    \vspace*{8ex}
+%   \newpage
+    
+    %*******************************************************
+    % List of Listings
+    %*******************************************************      
+	  %\phantomsection 
+    \refstepcounter{dummy}
+    %\addcontentsline{toc}{chapter}{\lstlistlistingname}
+    \pdfbookmark[1]{\lstlistlistingname}{lol}
+    \lstlistoflistings 
+
+    \vspace*{8ex}
+       
+    %*******************************************************
+    % Acronyms
+    %*******************************************************
+    %\phantomsection 
+    \refstepcounter{dummy}
+    \pdfbookmark[1]{Acronyms}{acronyms}
+    \markboth{\spacedlowsmallcaps{Acronyms}}{\spacedlowsmallcaps{Acronyms}}
+    \chapter*{Acronyms}
+    \begin{acronym}[UML]
+        \acro{DRY}{Don't Repeat Yourself}
+        \acro{API}{Application Programming Interface}
+        \acro{UML}{Unified Modeling Language}
+        \acro{ART} {Angular Radial Transform}
+        \acro{CADe} {Computer-aided diagnosis}
+        \acro{CADx} {Computer-aided detection}
+        \acro{CBIR} {Content-based image retrieval}
+        \acro{CBSD} {Contour-based shape descriptor}
+        \acro{CBVIR} {Content-based visual information retrieval}
+        \acro{CCD} {Conventional color descriptor}
+        \acro{CCH} {Conventional color histogram}
+        \acro{CFI} {Color fundus image}
+        \acro{CLD} {Color layout descriptor}
+        \acro{CSD} {Color structure descriptor}
+        \acro{CSME} {Clinically significant macular edema}
+        \acro{CSS} {Curvature scale space}
+        \acro{DCD} {Dominant color descriptor}
+        \acro{DME} {Diabetic macular edema}
+        \acro{DR} {Diabetic retinopathy}
+        \acro{EHD} {Edge histogram descriptor}
+        \acro{FA} {Fluorescein angiography} 
+        \acro{FP} {False positive error}
+        \acro{FV} {Feature vector}
+        \acro{GF} {Gabor filter}
+        \acro{HSV} {Hue, Saturation and Value color space}
+        \acro{HTD} {Homogeneous texture descriptor}
+        \acro{ICG} {Indocyanine Green}
+        \acro{ISO} {International organization for standardization}
+        \acro{ISO} {The International organization for standardization} 
+        \acro{IEC} {The International electrotechnical commission} 
+        \acro{MPEG} {Moving Pictures Expert Group}
+        \acro{OCT} {Optical coherence tomography}
+        \acro{OD} {Optic disc}
+        \acro{PBD} {Perceptual browsing descriptor}
+        \acro{QBIC} {Query by image content}
+        \acro{RGB} {Red, Green and Blue color space}
+        \acro{ROI} {Region of interest}
+        \acro{RSD} {Region-based shape descriptor}
+        \acro{SCD} {Scalable color descriptor}
+        \acro{SRC} {Similarity retrieval component}
+        \acro{TBD} {Texture browsing descriptor}
+    \end{acronym}                     
+\endgroup
+
+\cleardoublepage
